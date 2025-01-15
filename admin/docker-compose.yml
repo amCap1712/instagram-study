@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+ web:
+  build:
+   context: .
+  volumes:
+    - media_new:/code/media
+  ports:
+    - "9001:80"
+  environment:
+    - ROOT_PATH_PREFIX=/data-collector-admin
+    - SQLALCHEMY_DATABASE_URI=postgresql://postgres:postgres@db/postgres
+    - SENTRY_DSN=https://1ca0b5e9f6764510b7cccc63b095a600@o543224.ingest.us.sentry.io/5663111
+  depends_on:
+   - db
+  restart: unless-stopped
+
+ db:
+  image: postgres:15
+  environment:
+    - POSTGRES_PASSWORD=postgres
+  volumes:
+    - pgdata:/var/lib/postgresql/data
+  restart: unless-stopped
+
+volumes:
+  media_new:
+  pgdata:

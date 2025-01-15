@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Webview Data Collector Visualizer"/>
+    <title>Webview Data Collector Visualizer</title>
+    <style>
+      hr {
+          height: 4px;
+          color: black;
+          background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      {% for image in images %}
+        <div class="row">
+          <img src="{{ prefix }}/media/images/{{ image }}" height="640px" width="auto" />
+        </div>
+        <hr />
+      {% endfor %}
+    </div>
+  </body>
+</html>

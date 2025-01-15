@@ -1,0 +1,1 @@
+Social Media Data Research allows you to connect your social media account and donate your data. This data is anonymously aggregated and helps us study how various social media applications' algorithm works.

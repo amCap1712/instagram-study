@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Social Media Data Research</string>
+    <string name="title_activity_main">Social Media Data Research</string>
+
+    <string name="app_tagline">Survey for social media algorithms research</string>
+    <string name="email">Email</string>
+    <string name="year">Year</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_guest">Sign in as guest</string>
+    <string name="sign_in_create_account">Sign in or create an account</string>
+    <string name="or">or</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="user_continue">Continue</string>
+    <string name="create_account">Create account</string>
+    <string name="terms_and_conditions">By continuing, you agree to our Terms of Service. We’ll
+        handle your data according to our Privacy Policy.</string>
+    <string name="feature_not_available">Feature not available</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="done">Done</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+
+    <!-- survey-->
+    <string name="question_count">\u00A0of %d</string>
+    <string name="select_one">Select one.</string>
+    <string name="select_all">Select all that apply.</string>
+    <string name="select_date">Select date.</string>
+    <string name="select_email">Enter email.</string>
+
+    <!-- question 1 -->
+    <string name="choose_ethnicity">What is your race or ethnicity?</string>
+    <string name="black">Black or African American</string>
+    <string name="white">White</string>
+    <string name="hispanic">Hispanic, Latino or Spanish</string>
+    <string name="asian">Asian</string>
+    <string name="american_indian">American Indian or Alaska Native</string>
+    <string name="native_hawaii">Native Hawaiian or other Pacific Islander</string>
+    <string name="north_african">North African</string>
+    <string name="not_disclose">Prefer not to disclose</string>
+
+    <!-- question 2 -->
+    <string name="choose_gender">What is your gender identity?</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="non_binary">Non-binary</string>
+
+    <!-- question 3 -->
+    <string name="choose_birthyear">Which year were you born in?</string>
+
+    <!-- question 4 -->
+    <string name="choose_whether_to_contact">Are you willing to be contacted now or in the near future for research purposes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- question 5 -->
+    <string name="choose_email_to_contact">What email should we contact you at?</string>
+
+    <!-- question 6 -->
+    <string name="choose_politics">How would you describe your political views?</string>
+    <string name="option_very_liberal">Very liberal</string>
+    <string name="option_liberal">Liberal</string>
+    <string name="option_moderate">Moderate</string>
+    <string name="option_conservative">Conservative</string>
+    <string name="option_very_conservative">Very conservative</string>
+    <string name="option_libertarian">Libertarian</string>
+    <string name="option_progressive">Progressive</string>
+    <string name="option_socialist">Socialist</string>
+    <string name="option_centrist">Centrist</string>
+    <string name="option_apolitical">Apolitical/Not interested in politics</string>
+    <string name="option_other">Other (please specify):</string>
+    <string name="option_prefer_not_to_say">Prefer not to say</string>
+
+    <string name="prolific_id">Prolific ID</string>
+    <string name="enter_prolific_id">Enter your Prolific ID here:</string>
+    <string name="description_prolific_id" />
+
+
+    <string name="survey_result_title">Instagram Data Collection</string>
+    <string name="survey_result_subtitle">Thank you for filling out this survey!</string>
+    <string name="survey_result_description">By pressing done and logging in to your Instagram account, you agree to donate your instagram data for research purposes.</string>
+    <string name="strongly_dislike">Strongly\nDislike</string>
+    <string name="strongly_like">Strongly\nLike</string>
+    <string name="neutral">Neutral</string>
+
+    <string name="grant_permissions_description">To ensure that the user does not operate Instagram from official main app during the duration of the study, we need the usage access permission. Once you click the Grant Permissions button at the end of this page, you will be taken to a settings page to grant permissions to the application. Please follow the steps below to understand how you can do so.</string>
+
+    <string name="highlight_description">When you have logged in to Instagram, you will be taken to your regular feed page. Occasionally, we might alter some of the content in your feed for the purposes of our research study. Such posts will be highlighted with a red border as shown in the image below.</string>
+    <string name="highlight_image_description">Image showing a post enclosed in a red border to highlight that it was injected in the feed.</string>
+
+    <string name="notification_title">Instagram Detected</string>
+    <string name="notification_content">We have detected that you recently used the Instagram android application. You are request not to use the application for the duration of the study as it may affect the app\'s behaviour.</string>
+    <string name="channel_name">social_media_data_research_notifications</string>
+    <string name="channel_description">Social Media Data Research Notifications</string>
+
+</resources>

@@ -1,0 +1,102 @@
+{% macro format_collection_list(collections) %}
+  <table>
+        <thead>
+          <tr>
+            <th>Collection ID</th>
+            <th>User ID</th>
+            <th>Created At</th>
+            <th>Item Count</th>
+            <th>Media</th>
+            <th>Ads</th>
+            <th>Explore Story</th>
+            <th>End of Feed Demarcator</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for quantification in collections %}
+            {% set collection = quantification.collection %}
+            <tr>
+              <td>{{ collection.id }}</td>
+              <td>{{ collection.user_id }}</td>
+              <td>{{ collection.created_at }}</td>
+              <td>{{ collection.items | length }}</td>
+              <td>{{ quantification.media | length }}</td>
+              <td>{{ quantification.ads | length }}</td>
+              <td>{{ quantification.explore_story | length }}</td>
+              <td>{{ quantification.end_of_feed_demarcator | length }}</td>
+              <td><a href="{{ collection.source.value }}/?user_id={{ collection.user_id }}&collection_id={{ collection.id }}">Open</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endmacro %}
+
+{% macro format_quantification(label, quantification) %}
+  <tr>
+    <td>{{ label }}</td>
+    <td>{{ quantification.media | length }}</td>
+    <td>{{ quantification.ads | length }}</td>
+    <td>{{ quantification.explore_story | length }}</td>
+    <td>{{ quantification.end_of_feed_demarcator | length }}</td>
+  </tr>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Webview Data Collector Visualizer"/>
+    <title>Webview Data Collector Visualizer</title>
+    <style>
+      table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table td, table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      table tr:nth-child(even){background-color: #f2f2f2;}
+
+      table tr:hover {background-color: #ddd;}
+
+      table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Active</h2>
+      {{ format_collection_list(actives) }}
+      <h2>Passive</h2>
+      {{ format_collection_list(passives) }}
+      <h2>Overall</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Media</th>
+            <th>Ads</th>
+            <th>Explore Story</th>
+            <th>End of Feed Demarcator</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ format_quantification('ACTIVE', all_active_quantification) }}
+          {{ format_quantification('PASSIVE', all_passive_quantification) }}
+          {{ format_quantification('DIFFERENCE', difference_quantification) }}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

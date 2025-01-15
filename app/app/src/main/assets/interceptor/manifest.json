@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "webview-data-collector",
+  "version": "0.0.1",
+  "description": "Firefox extension to intercept requests",
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/32.png",
+    "default_title": "Firefox Extension Template"
+  },
+  "permissions": ["webRequest", "webRequestBlocking", "cookies", "storage", "nativeMessaging", "nativeMessagingFromContent", "geckoViewAddons", "<all_urls>"],
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "kartikohri13@gmail.com"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/images/
+/private-key.json
+/.env
+
+/.git*
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/*.py[cod]
+
+# Virtual environment
+/env*/
+/venv*/
+/build*/
+
+# Logs
+**/*.log
+**/pip-log.txt
+**/pip-delete-this-directory.txt
+
+# Test results
+**/htmlcov/
+**/.coverage
